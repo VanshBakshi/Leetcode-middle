@@ -10,4 +10,4 @@ class Solution:
                 result += symbols[i]
                 num -= values[i]
 
-        return result
+        return result 
