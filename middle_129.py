@@ -1,0 +1,15 @@
+class Solution:
+    def sumNumbers(self, root):
+        def dfs(node, current):
+            if node is None:
+                return 0
+
+            current = current * 10 + node.val
+
+            # Leaf node
+            if node.left is None and node.right is None:
+                return current
+
+            return dfs(node.left, current) + dfs(node.right, current)
+
+        return dfs(root, 0)
